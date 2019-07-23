@@ -1,0 +1,10 @@
+Commande docker pour lancer une instance MySQL
+1 - Se positionner dans le dossier appdata et executer
+docker run -it --rm --name spring-remoting -v ${pwd}:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=arsenal -p 3306:3306 -d mysql:5.7
+2 - Se connecter à la base de donnée via un RDBMS
+    host:localhost
+    user: root
+    password: arsenal
+    port: 3306
+3 - Utiliser les scripts dans src/main/resources/META-INF/sql
+    pour creer et populer la base de données.
